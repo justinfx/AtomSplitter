@@ -1,0 +1,75 @@
+QWidget {
+	background-color: rgb(41, 41, 41);
+	color: rgb(200, 200,200);
+}
+
+QLineEdit {
+	color: rgb(255, 165, 0);
+	padding: 2px;
+}
+QLineEdit:disabled {
+	color: rgb(128, 128, 128);
+	border-color: rgb(128, 128, 128);
+}
+
+QGroupBox {
+    background-color: rgb(55, 55, 55);
+	color: rgb(255, 255, 255);
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-top: 1ex; /* leave space at the top for the title */
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center; /* position at the top center */
+    padding: 0 5px;
+    background-color: rgb(55, 55, 55);
+	color: rgb(255, 255, 255);
+}
+
+QLabel {
+    background-color: rgb(55, 55, 55);
+	color: rgb(255, 255, 255);
+}
+
+QStackedWidget {
+    border: 2px solid rgb(120, 120, 120);
+    border-radius: 5px;
+	padding: 2px;
+}
+
+QGroupBox#subGroupBox {
+	border: 0px;
+}
+
+#buttonBar {
+	background-image: url(:/images/toolbarBg.png);
+}
+
+QPushButton[flat='false'] {
+	border: 2px solid rgb(200, 200, 200);
+	border-radius: 6px;
+}
+QPushButton[flat='false']:pressed {
+	border: 3px inset rgb(200, 200, 200);
+}
+QPushButton[flat='false']:disabled {
+	border: 2px solid rgb(128, 128, 128);
+}
+
+#convertButton {
+	min-width: 60px;
+	color: rgb(73, 255, 73);
+}
+#quitButton {
+	min-width: 60px;
+	color: rgb(255, 77, 73);
+}
+
+#sourceFileButton,#outFileButton {
+	min-width: 25px;
+}
+
+QMessageBox { background-color: rgb(55, 55, 55); }
+

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/atomsplit/!svn/ver/2/trunk/source/templates
+END
+action_template.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/atomsplit/!svn/ver/2/trunk/source/templates/action_template.py
+END
+chan2action.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/atomsplit/!svn/ver/2/trunk/source/templates/chan2action.py
+END
+fbx_template.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/atomsplit/!svn/ver/2/trunk/source/templates/fbx_template.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/atomsplit/!svn/ver/2/trunk/source/templates/__init__.py
+END
+chan2terragen.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/atomsplit/!svn/ver/2/trunk/source/templates/chan2terragen.py
+END
