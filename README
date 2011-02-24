@@ -9,13 +9,13 @@ Description
 ============================================
 
 This FREE desktop application allows you to convert nuke Camera.chan files into 
-either Autodesk¨ FBX¨ or Autodesk¨ Flame¨ .action files with the simplest of controls. 
+either Autodesk FBX or Autodesk Flame .action files with the simplest of controls. 
 It was designed for Chris Maynard of cmiVFX based on the research for the NukeX tracking system. 
 Justin Israel and George Nahkl sorted out the code in python then ported it into individual 
 desktop applications for convenient use. This is a python based solution that will provide 
 extensibility to those interested in expanding its features. cmiVFX supports the open source 
 growth of this application and is willing to share its source code to participating members 
-of this community. The Autodesk¨ FBX¨ plug-in allows all types of data to be packaged into one 
+of this community. The Autodesk FBX plug-in allows all types of data to be packaged into one 
 file format that can be used by most of today's 3D authoring software.
 
 
