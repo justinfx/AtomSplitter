@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="images">
+    <file>icon.png</file>
+    <file>cmi_small.png</file>
+    <file>toolbarBg.png</file>
+    <file>aboutOff.png</file>
+    <file>aboutOn.png</file>
+    <file>cmi_logo.png</file>
+    <file>settingsOff.png</file>
+    <file>settingsOn.png</file>
+    <file>titlebar.png</file>
+  </qresource>
+</RCC>

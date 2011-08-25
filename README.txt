@@ -3,7 +3,10 @@ AtomSplitter
 Written by: Justin Israel
       justinisrael@gmail.com
       justinfx.com
-      
+
+
+Project Site:  http://redmine.justinfx.com/projects/atomsplitter  
+
 
 Description
 ============================================

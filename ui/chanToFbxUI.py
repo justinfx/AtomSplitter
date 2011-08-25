@@ -1,26 +1,11 @@
 # -*- coding: utf-8 -*-
-"""
-Copyright (c) 2010 cmiVFX.com <info@cmivfx.com>
 
-This file is part of AtomSplitter.
-
-AtomSplitter is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-AtomSplitter is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with AtomSplitter.  If not, see <http://www.gnu.org/licenses/>.
-
-Written by: Justin Israel
-			justinisrael@gmail.com
-			justinfx.com
-"""
+# Form implementation generated from reading ui file 'src/chanToFbxUI.ui'
+#
+# Created: Thu Aug 25 14:56:15 2011
+#      by: PyQt4 UI code generator 4.8.4
+#
+# WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
 
@@ -32,8 +17,8 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(744, 496)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
+        MainWindow.resize(744, 409)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
@@ -129,20 +114,6 @@ class Ui_MainWindow(object):
         self.verticalLayout.setSpacing(2)
         self.verticalLayout.setContentsMargins(8, 6, 8, 6)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
-        self.adFrame = QtGui.QFrame(self.centralwidget)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.adFrame.sizePolicy().hasHeightForWidth())
-        self.adFrame.setSizePolicy(sizePolicy)
-        self.adFrame.setMinimumSize(QtCore.QSize(728, 90))
-        self.adFrame.setMaximumSize(QtCore.QSize(728, 90))
-        self.adFrame.setFrameShape(QtGui.QFrame.StyledPanel)
-        self.adFrame.setObjectName(_fromUtf8("adFrame"))
-        self.adFrameLayout = QtGui.QVBoxLayout(self.adFrame)
-        self.adFrameLayout.setMargin(0)
-        self.adFrameLayout.setObjectName(_fromUtf8("adFrameLayout"))
-        self.verticalLayout.addWidget(self.adFrame)
         self.buttonBar = QtGui.QWidget(self.centralwidget)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
@@ -179,26 +150,6 @@ class Ui_MainWindow(object):
         self.settingsBtn.setFlat(True)
         self.settingsBtn.setObjectName(_fromUtf8("settingsBtn"))
         self.horizontalLayout_3.addWidget(self.settingsBtn)
-        self.chatBtn = QtGui.QPushButton(self.buttonBar)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.chatBtn.sizePolicy().hasHeightForWidth())
-        self.chatBtn.setSizePolicy(sizePolicy)
-        self.chatBtn.setMinimumSize(QtCore.QSize(0, 54))
-        self.chatBtn.setMaximumSize(QtCore.QSize(130, 54))
-        self.chatBtn.setStyleSheet(_fromUtf8(""))
-        self.chatBtn.setText(_fromUtf8(""))
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(_fromUtf8(":/images/chatOff.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon2.addPixmap(QtGui.QPixmap(_fromUtf8(":/images/chatOn.png")), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        self.chatBtn.setIcon(icon2)
-        self.chatBtn.setIconSize(QtCore.QSize(135, 60))
-        self.chatBtn.setCheckable(True)
-        self.chatBtn.setChecked(False)
-        self.chatBtn.setFlat(True)
-        self.chatBtn.setObjectName(_fromUtf8("chatBtn"))
-        self.horizontalLayout_3.addWidget(self.chatBtn)
         self.aboutBtn = QtGui.QPushButton(self.buttonBar)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -209,22 +160,22 @@ class Ui_MainWindow(object):
         self.aboutBtn.setMaximumSize(QtCore.QSize(132, 54))
         self.aboutBtn.setStyleSheet(_fromUtf8(""))
         self.aboutBtn.setText(_fromUtf8(""))
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(_fromUtf8(":/images/aboutOff.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon3.addPixmap(QtGui.QPixmap(_fromUtf8(":/images/aboutOn.png")), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        self.aboutBtn.setIcon(icon3)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(_fromUtf8(":/images/aboutOff.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(_fromUtf8(":/images/aboutOn.png")), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.aboutBtn.setIcon(icon2)
         self.aboutBtn.setIconSize(QtCore.QSize(135, 60))
         self.aboutBtn.setCheckable(True)
         self.aboutBtn.setFlat(True)
         self.aboutBtn.setObjectName(_fromUtf8("aboutBtn"))
         self.horizontalLayout_3.addWidget(self.aboutBtn)
-        spacerItem2 = QtGui.QSpacerItem(30, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        spacerItem2 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem2)
         self.cmiSmallButton = QtGui.QPushButton(self.buttonBar)
         self.cmiSmallButton.setText(_fromUtf8(""))
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(_fromUtf8(":/images/cmi_small.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.cmiSmallButton.setIcon(icon4)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(_fromUtf8(":/images/cmi_small.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.cmiSmallButton.setIcon(icon3)
         self.cmiSmallButton.setIconSize(QtCore.QSize(69, 19))
         self.cmiSmallButton.setFlat(True)
         self.cmiSmallButton.setObjectName(_fromUtf8("cmiSmallButton"))
@@ -577,9 +528,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addItem(spacerItem7)
         self.cmiLogoButton = QtGui.QPushButton(self.aboutPage)
         self.cmiLogoButton.setText(_fromUtf8(""))
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(_fromUtf8(":/images/cmi_logo.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.cmiLogoButton.setIcon(icon5)
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(_fromUtf8(":/images/cmi_logo.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.cmiLogoButton.setIcon(icon4)
         self.cmiLogoButton.setIconSize(QtCore.QSize(180, 105))
         self.cmiLogoButton.setFlat(True)
         self.cmiLogoButton.setObjectName(_fromUtf8("cmiLogoButton"))
@@ -599,10 +550,6 @@ class Ui_MainWindow(object):
         self.gridLayout_2 = QtGui.QGridLayout(self.chatPage)
         self.gridLayout_2.setMargin(0)
         self.gridLayout_2.setObjectName(_fromUtf8("gridLayout_2"))
-        self.chatView = QtWebKit.QWebView(self.chatPage)
-        self.chatView.setUrl(QtCore.QUrl(_fromUtf8("about:blank")))
-        self.chatView.setObjectName(_fromUtf8("chatView"))
-        self.gridLayout_2.addWidget(self.chatView, 0, 0, 1, 1)
         self.stack.addWidget(self.chatPage)
         self.verticalLayout.addWidget(self.stack)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -612,7 +559,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", ".chan To FBX Converter", None, QtGui.QApplication.UnicodeUTF8))
+        MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "AtomSplitter", None, QtGui.QApplication.UnicodeUTF8))
         self.settingsPage.setStyleSheet(QtGui.QApplication.translate("MainWindow", "background-color: rgb(55, 55, 55);", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox.setTitle(QtGui.QApplication.translate("MainWindow", "File", None, QtGui.QApplication.UnicodeUTF8))
         self.label_4.setText(QtGui.QApplication.translate("MainWindow", "Camera .chan:", None, QtGui.QApplication.UnicodeUTF8))
@@ -652,7 +599,8 @@ class Ui_MainWindow(object):
 "<table border=\"0\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;\" align=\"center\" cellspacing=\"8\" cellpadding=\"0\">\n"
 "<tr>\n"
 "<td>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Project based on the beta testing between <br />The Foundry\'s NUKE Tracker and Flame Action by Chris Maynard.</p></td></tr>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Project based on the beta testing between <br />The Foundry\'s NUKE Tracker and Flame Action by Chris Maynard.</p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Project Tracking: <a href=\"http://redmine.justinfx.com/projects/atomsplitter\"><span style=\" text-decoration: underline; color:#ffa500;\">http://redmine.justinfx.com/projects/atomsplitter</span></a></p></td></tr>\n"
 "<tr>\n"
 "<td>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">GUI Design / .chan parsing / FBX, TGD conversion:</span><br />Justin Israel <a href=\"mailto:justinisrael@gmail.com\"><span style=\" text-decoration: underline; color:#ffa500;\">(justinisrael@gmail.com)</span></a><br /><a href=\"http://www.justinfx.com\"><span style=\" text-decoration: underline; color:#ffa500;\">www.justinfx.com</span></a></p></td></tr>\n"
@@ -660,5 +608,4 @@ class Ui_MainWindow(object):
 "<td>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">.action conversion code provided by: </span><br />Georges Nakhle <a href=\"mailto:nakhle_georges@hotmail.com\"><span style=\" text-decoration: underline; color:#ffa500;\">(nakhle_georges@hotmail.com)</span></a><br /><a href=\"http://www.geonak.com/\"><span style=\" text-decoration: underline; color:#ffa500;\">www.geonak.com</span></a></p></td></tr></table></body></html>", None, QtGui.QApplication.UnicodeUTF8))
 
-from PyQt4 import QtWebKit
 import resources_rc

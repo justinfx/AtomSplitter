@@ -31,20 +31,12 @@ from math import tan, radians
 from collections import defaultdict
 from functools import partial
 
-
-try:
-	import json
-except:
-	import simplejson as json
-
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
-from PyQt4.QtNetwork import QHttp
 
 from templates import fbx_template, chan2terragen, chan2action
 
 from ui.chanToFbxUI import Ui_MainWindow
-from ui.adLoaderWidget import AdLoader
 
 ############################################################# 
 #############################################################
@@ -67,7 +59,7 @@ class ChanConvert(object):
 	DEFAULT_FILMHEIGHT = 18.672
 	DEFAULT_SCALEVALUE = 1.0
 	
-	VERSION = "1.6.2"
+	VERSION = "1.6.3"
 	
 	def __init__(self, chanFile, objFile=None, **kwargs):
 		""" 
@@ -548,11 +540,6 @@ class ChanConverGUI(QMainWindow, Ui_MainWindow):
 
 	"""
 	
-	AD_DATA_SOURCE = "http://cmivfx.com/AtomSplitter/banners/adSource.txt"
-	AD_DATA_HOST = 'www.cmivfx.com'
-	
-	
-	
 	def __init__(self, parent=None, **kwargs):
 		super(ChanConverGUI, self).__init__(parent)
 		self.setupUi(self)
@@ -565,7 +552,6 @@ class ChanConverGUI(QMainWindow, Ui_MainWindow):
 		
 		self.toolButtons = QButtonGroup(self)
 		self.toolButtons.addButton(self.settingsBtn)
-		self.toolButtons.addButton(self.chatBtn)
 		self.toolButtons.addButton(self.aboutBtn)
 
 		self.fileTypeButtons = QButtonGroup(self)
@@ -587,8 +573,7 @@ class ChanConverGUI(QMainWindow, Ui_MainWindow):
 			
 		self.objFileField.focusInEvent = focusEvent
 
-		websettings = self.chatView.settings()
-		websettings.setAttribute(websettings.PluginsEnabled,True)
+
 				
 		# tool tips
 		self.__toolTips = {}
@@ -617,10 +602,6 @@ class ChanConverGUI(QMainWindow, Ui_MainWindow):
 		
 		self.groupBox.mouseMoveEvent = partial(self._setInfoLine, '')
 
-		
-		# ad widget
-		self.adWidget = AdLoader(self)
-		self.adFrameLayout.addWidget(self.adWidget)
 	
 		# form values
 		self.sourceFileField.setText(kwargs.get('chan', ""))
@@ -649,71 +630,14 @@ class ChanConverGUI(QMainWindow, Ui_MainWindow):
 		self.connect(self.settingsBtn, SIGNAL("clicked()"), cbk)
 		cbk = partial(self.stack.setCurrentIndex, 1)
 		self.connect(self.aboutBtn, SIGNAL("clicked()"), cbk)	
-#		cbk = partial(self.stack.setCurrentIndex, 2)
-		self.connect(self.chatBtn, SIGNAL("clicked()"), self._chatButton_Clicked)
 		
 		QTimer.singleShot(1, self._initDelayed)
 	
-	
-	def closeEvent(self, event):
-		self.adWidget.stop()	
-		super(ChanConverGUI, self).closeEvent(event)
 			
 	def _initDelayed(self):
 		""" """
-		#
-		# Ads
-		#
-		self.__http = QHttp()
-		self.__http.setHost(self.AD_DATA_HOST)
-		self.__httpID = None
-		
-		self.connect(self.__http, SIGNAL("requestFinished(int,bool)"), self._initAdWidget)
-		self.__httpID = self.__http.get(self.AD_DATA_SOURCE)
-		
+        pass
 
-	def _initAdWidget(self, id, error):
-		""" """
-		if id != self.__httpID:
-			return
-		
-		resp = self.__http.lastResponse()
-		if resp.statusCode() != 200:
-			return
-		
-		strData = str(self.__http.readAll())
-		data = json.loads(strData)
-		adData = data['config']['ads']
-		random.shuffle(adData)
-		
-		self.adWidget.setAdData(adData)
-		self.adWidget.setAdInterval(data['config']['interval'])
-		self.adWidget.start()	
-
-	def _chatButton_Clicked(self, *args, **kwargs):
-		""" """
-		self.stack.setCurrentIndex(2)
-		
-		if not self.__chatLoaded:
-			self._initChatWidget()
-			self.__chatLoaded = True
-		
-		
-	def _initChatWidget(self):
-		""" """
-		#
-		# Chat
-		#
-		chatSize = self.stack.size()
-		chatCode = """ 
-		<iframe src="http://cdn.livestream.com/embed/cmivfx?layout=3&autoPlay=false" 
-				width="%(width)s" height="%(height)s" style="border:0;outline:0" 
-				frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-		Requires Mozilla Flash Player version 10
-		</iframe>
-		""" % {'width' : chatSize.width()-25, 'height' : chatSize.height()-25}
-		
-		self.chatView.setHtml(chatCode)
 				
 	def convert(self):
 		""" """
