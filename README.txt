@@ -5,7 +5,7 @@ Written by: Justin Israel
       justinfx.com
 
 
-Project Site:  http://redmine.justinfx.com/projects/atomsplitter  
+Project Site:  http://redmine.justinfx.com/projects/atomsplitter/wiki
 
 
 Description
@@ -20,6 +20,18 @@ extensibility to those interested in expanding its features. cmiVFX supports the
 growth of this application and is willing to share its source code to participating members 
 of this community. The Autodesk FBX plug-in allows all types of data to be packaged into one 
 file format that can be used by most of today's 3D authoring software.
+
+
+Pre-built Binary
+============================================
+
+Older binary builds hosted here:  
+http://justinfx.com/public/files/AtomSplitter/1.6.2/binary/
+
+Binary builds are no longer maintained as of v1.6.2
+The current way to use AtomSplitter is to download the source, and either running
+directly from the AtomSplitter.py script, or follow the directions below and build
+into a stand-alone executable.
 
 
 Dependancies
