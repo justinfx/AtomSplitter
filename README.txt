@@ -5,7 +5,6 @@ Written by: Justin Israel
       justinfx.com
 
 
-Project Site:  http://redmine.justinfx.com/projects/atomsplitter/wiki
 
 
 Description
